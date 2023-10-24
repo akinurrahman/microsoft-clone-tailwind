@@ -9,10 +9,13 @@ const Header = () => {
   const [hamburger, setHamburger] = useState(false);
 
   return (
-    <header className="container flex justify-between p-4 items-center">
+    <header className=" flex justify-between p-4 items-center">
       <div className="flex space-x-5 items-center">
         {hamburger ? (
-          <AiOutlineClose size={24} onClick={() => setHamburger((prev) => !prev)} />
+          <AiOutlineClose
+            size={24}
+            onClick={() => setHamburger((prev) => !prev)}
+          />
         ) : (
           <RxHamburgerMenu
             size={24}
@@ -26,16 +29,23 @@ const Header = () => {
         <img
           src="/microsoft_logo.png"
           alt="logo"
-          className="w-2/4 mx-auto sm:w-1/4 "
+          className="w-2/4 mx-auto md:w-1/4"
         />
-        <nav className="hidden sm:flex ">
-          <ul className="flex space-x-4 text-gray-700  whitespace-nowrap">
-            <li>Microsoft 365</li>
-            <li>Teams</li>
-            <li>Windows</li>
-            <li>Surface</li>
-            <li>Xbox</li>
-            <li>Support</li>
+        <nav className={hamburger ? ` md:flex  ` : `hidden md:flex  `}>
+          <ul
+            className={`${
+              hamburger
+                ? "absolute top-16 left-0 right-0 pb-7 pl-7  space-y-6 bg-gray-100"
+                : "flex  flex-col md:flex-row text-gray-700  space-x-4 mx-4 whitespace-nowrap "
+            }`}
+          >
+            <li></li>
+            <li className="hover:text-blue-600">Microsoft 365</li>
+            <li className="hover:text-blue-600">Teams</li>
+            <li className="hover:text-blue-600">Windows</li>
+            <li className="hover:text-blue-600">Surface</li>
+            <li className="hover:text-blue-600">Xbox</li>
+            <li className="hover:text-blue-600">Support</li>
           </ul>
         </nav>
       </div>
