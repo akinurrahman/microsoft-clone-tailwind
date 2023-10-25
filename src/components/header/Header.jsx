@@ -35,7 +35,7 @@ const Header = () => {
           <ul
             className={`${
               hamburger
-                ? "absolute top-16 left-0 right-0 pb-7 pl-7  space-y-6 bg-gray-100"
+                ? "absolute top-16 left-0 right-0 pb-7 pl-7  space-y-6 bg-gray-100 border-b border-black"
                 : "flex  flex-col md:flex-row text-gray-700  space-x-4 mx-4 whitespace-nowrap "
             }`}
           >
@@ -46,6 +46,13 @@ const Header = () => {
             <li className="hover:text-blue-600">Surface</li>
             <li className="hover:text-blue-600">Xbox</li>
             <li className="hover:text-blue-600">Support</li>
+            <li className="hover:text-blue-600 md:hidden">Software</li>
+            <li className="hover:text-blue-600 md:hidden">Pc & Devices</li>
+            <li className="hover:text-blue-600 md:hidden">Entertainment</li>
+            <li className="hover:text-blue-600 md:hidden">Business</li>
+            <li className="hover:text-blue-600 md:hidden">Development & IT</li>
+            <li className="hover:text-blue-600 md:hidden">Other</li>
+            <li className="hover:text-blue-600 md:hidden ">View sitemap</li>
           </ul>
         </nav>
       </div>
